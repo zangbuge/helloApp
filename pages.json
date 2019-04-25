@@ -5,7 +5,23 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		
+		//配置登录路由
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		
+		{
+			"path": "pages/user/uni-center",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
 		}
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

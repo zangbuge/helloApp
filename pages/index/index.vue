@@ -26,11 +26,9 @@
 			 * 登录
 			 */
 			login () {
-				//加载框
-				uni.showLoading({
-					title : '正在登录',
-					duration : 3000 //提示延迟时间
-				})
+				uni.redirectTo({
+					url : '../login/login'
+				});
 			}
 			
 			/**
