@@ -27,6 +27,9 @@
 				<view class="uni-btn-v">
 					<button type="primary" @click="login();">登录</button>
 				</view>
+				<view class="uni-btn-v">
+					<button type="primary" @click="cancel();">取消</button>
+				</view>
 			</view>
 		</form>
 	</view>
@@ -52,6 +55,14 @@
 					title: '正在登录...',
 					duration: 2000
 				})
+			}
+			//返回
+			,cancel () {
+				console.info('返回...');
+				uni.navigateBack({
+					delta: 1
+				});
+				console.info('已返回')
 			}
 		}
 		

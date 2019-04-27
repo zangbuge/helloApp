@@ -26,7 +26,7 @@
 			 * 登录
 			 */
 			login () {
-				uni.redirectTo({
+				uni.navigateTo({
 					url : '../login/login'
 				});
 			}
