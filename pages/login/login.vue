@@ -53,7 +53,20 @@
 				console.info('正在登录...');
 				uni.showLoading({
 					title: '正在登录...',
-					duration: 2000
+					duration: 2000,
+					success:function(){
+						console.info('成功')
+						uni.request({
+							url: 'http://localhost:8010/training/hjApply/getHjblApplyList', 
+							method: 'POST',
+							header:{
+								'content-type' : 'application/x-www-form-urlencoded'
+							},
+							success: (res) => {
+								console.log(res.data);
+							}
+						});
+					}
 				})
 			}
 			//返回
