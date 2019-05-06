@@ -13,14 +13,8 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
-		},
-		
-		{
-			"path": "pages/user/uni-center",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
 		}
+		
 		
 	],
 	"globalStyle": {
