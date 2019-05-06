@@ -58,5 +58,19 @@
 			"urlCheck": false
 		},
 		"usingComponents": true
-	}
+	},
+	
+	"h5": {
+        "devServer": {
+            "port": 8800,
+            "disableHostCheck": true,
+            "proxy": {
+                "/dpc": {
+                    "target": "http://dpc.dapeis.net",
+                    "changeOrigin": true,
+                    "secure": false
+                }
+            }
+        }
+    }
 }
