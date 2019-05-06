@@ -24,6 +24,10 @@
                     </checkbox-group>
                 </view>
 				
+				<view>
+					<text class="title">--{{nickname}}--</text>
+				</view>
+				
 				<view class="uni-btn-v">
 					<button type="primary" @click="login();">登录</button>
 				</view>
@@ -37,6 +41,11 @@
 </template>
 
 <script>
+	import {
+	    mapState,
+	    mapMutations
+	} from 'vuex';
+	
 	export default {
 		data () {
 			return {
@@ -47,7 +56,15 @@
 			}
 		}
 		
+		,computed:{
+			...mapState(['nickname'])
+		}
+		
 		,methods : {
+			setName () {
+				this.$store.commit('change', '登录成功')
+		    },
+			
 			//登录
 			login () {
 				console.info('正在登录...');
@@ -68,6 +85,9 @@
 						});
 					}
 				})
+				
+				//修改store
+				this.setName();
 			}
 			//返回
 			,cancel () {
