@@ -2,6 +2,10 @@
 	<view>
 		<form @submit="formSubmit" @reset="formReset">
 			<view class="uni-padding-wrap uni-common-mt">
+				<!-- <view>
+					<navigator open-type="navigateBack"/> 
+				</view> -->
+				
 				<view class="uni-form-item uni-column">
 					<view class="title">用户: </view>
 					<input id="username" type="text" v-model="user.name"/>
@@ -28,6 +32,8 @@
 					<text class="title">--{{nickname}}--</text>
 				</view>
 				
+				<childSucces message="lhm_success_login"></childSucces>
+				
 				<view class="uni-btn-v">
 					<button type="primary" @click="login();">登录</button>
 				</view>
@@ -41,6 +47,8 @@
 </template>
 
 <script>
+	import childSucces from '../../conponents/loginSuccess.vue'
+	
 	import {
 	    mapState,
 	    mapMutations
@@ -54,6 +62,10 @@
 					password : ''
 				}
 			}
+		}
+		
+		,components: {
+			childSucces : childSucces
 		}
 		
 		,computed:{
