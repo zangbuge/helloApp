@@ -31,8 +31,8 @@
 				<view>
 					<text class="title">--{{nickname}}--</text>
 				</view>
-				
-				<childSucces message="lhm_success_login"></childSucces>
+				<p>父组件接手到的内容：{{ user.name }}</p>
+				<childSucces message="lhm_success_login"  @receiveMsg="getMsg" ></childSucces>
 				
 				<view class="uni-btn-v">
 					<button type="primary" @click="login();">登录</button>
@@ -73,6 +73,10 @@
 		}
 		
 		,methods : {
+			getMsg (msg) {
+				console.info('接受到数据: ' ,msg);
+				this.user.name = msg
+			},
 			setName () {
 				this.$store.commit('change', '登录成功')
 		    },
