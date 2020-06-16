@@ -8,6 +8,9 @@
 		<button @click="regist();">注册</button>
 		<button @click="changeUser();">切换账户</button>
 		<button @click="otherWay();">其他登录方式</button>
+		<view class="page-body">
+			<web-view src="https://www.fxitalk.com"></web-view>
+		</view>
 	</view>
 </template>
 
@@ -81,6 +84,10 @@
 				});
 			}
 
+		},
+		
+		mounted () {
+			// window.open('www.baidu.com', '_blank');
 		}
 	}
 </script>
