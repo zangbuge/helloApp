@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<!-- <view class="content">
         <image class="logo" src="/static/logo.png"></image>
 		<view>
             <text class="title">{{title}}</text>
@@ -8,9 +8,9 @@
 		<button @click="regist();">注册</button>
 		<button @click="changeUser();">切换账户</button>
 		<button @click="otherWay();">其他登录方式</button>
-		<view class="page-body">
-			<web-view src="https://www.fxitalk.com"></web-view>
-		</view>
+	</view> -->
+	<view class="page-body">
+		<web-view src="http://www.fxitalk.com"></web-view>
 	</view>
 </template>
 
